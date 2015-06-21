@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<?php $__env->startSection('content'); ?>
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="what-info">
+                <div class="strip"></div>
+                <p> 
+                    <?php $messages = $errors->all('<p style="color:red">:message</p>') ?>
+                    <?php foreach ($messages as $msg): ?>
+                    <?= $msg ?>
+                    <?php endforeach; ?>
+                </p>
+                <br/>
+            </div>
+            <div class="col-lg-4">
+                <h2 class="text-center">REGISTER FORM ADMIN</h2>
+                <?php echo Form::open(array('action' => 'IndexController@registerresult', 'files'=>true)); ?>
+
+                <div class="form-group">
+                    <label for="username">USERNAME</label>
+                    <input type="text" class="form-control" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" class="form-control" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="ulang">RE-TYPE PASSWORD</label>
+                    <input type="password" class="form-control" name="repassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="nama">NAMA</label>
+                    <input type="text" class="form-control" name="nama" required>
+                </div>
+                <div class="form-group">
+                    <label for="alamat">ALAMAT</label>
+                    <input type="text" class="form-control" name="alamat" required>
+                </div>
+                <div class="form-group">
+                    <label for="telp">NO TELEPON</label>
+                    <input type="text" class="form-control" name="no_telp" required>
+                </div>
+                <?php echo Form::submit('Submit', array('class' => 'btn btn-primary btn-lg')); ?>
+
+                <?php echo Form::reset('Reset', array('class' => 'btn btn-danger btn-lg')); ?>
+
+                <?php echo Form::close(); ?>
+
+            </div>
+        </div>
+    </div>
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

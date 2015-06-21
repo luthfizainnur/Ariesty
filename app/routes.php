@@ -23,6 +23,8 @@ Route::post('register', 'IndexController@registerresult');
 
 Route::post('register', 'IndexController@postjawaban');
 
+Route::get('hasil', 'IndexController@groupJawaban');
+
 Route::get('admin', array('as' => 'admin.admin', 'uses' => 'IndexController@admin'));
 
 Route::group(array('before' => 'auth'), function(){

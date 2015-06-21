@@ -56,7 +56,6 @@
                             @endforeach
                         </tbody>
                     </table>
-
                 </div>
             </fieldset>
             {{Form::submit('Submit', array('class' => 'btn btn-primary btn-lg')) }}

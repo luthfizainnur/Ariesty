@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ariesty Cake</title>
+    </head>
+                
+    <body>
+        <div class="wrapper">
+            <div class="navbar navbar-inverse navbar-fixed-top inverse">
+                <?php echo $__env->make('menuadmin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            </div>
+        
+            <div class="container">
+                <div class="content">
+
+                </div>
+            </div>
+        </div>
+                
+        <?php echo $__env->yieldContent('content'); ?>
+    <!-- Bootstrap core css -->
+    <?php echo HTML::style('asset/bootstrap/css/bootstrap.css/'); ?>
+
+            
+    <!-- javascript -->
+    <?php echo HTML::script('asset/bootstrap/js/jquery.js/'); ?>
+
+        <?php echo $__env->yieldContent('javascript'); ?>
+    </body>
+</html>

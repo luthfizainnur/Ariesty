@@ -95,5 +95,18 @@ class IndexController extends BaseController{
         Session::flash('message', 'Data Berhasil Ditambahkan');
         return Redirect::to('login');
     }
+    
+    public function groupJawaban(){
+        $group = DB::select(DB::raw('SELECT x.id_produk, x.id_pertanyaan, avg(x.jawaban) - y.gap AS GAP from jawaban x, pertanyaan y GROUP BY x.id_produk, x.id_pertanyaan'));
+
+        //check the result
+            //var_dump($group);
+        
+        //check the query correct or not in eloquent
+            //$queries = DB::getQueryLog();
+            //var_dump(end($queries));
+        
+        return View::make('hasil');
+    }
 
 }
