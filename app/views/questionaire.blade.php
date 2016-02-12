@@ -8,7 +8,6 @@
             <fieldset>
                 <!-- Form Name -->
                 <legend>Questionaire</legend>
-
                 <!-- Select Tipe Pastry -->
                 <div class="form-group">
                     <label class="col-md-2 control-label" for="Tipe">Tipe Pastry</label>
@@ -57,6 +56,7 @@
                         </tbody>
                     </table>
                 </div>
+                <legend>Keterangan || 1 = Tidak Puas | 2 = Puas | 3 = Sangat Puas</legend>
             </fieldset>
             {{Form::submit('Submit', array('class' => 'btn btn-primary btn-lg')) }}
             {{ Form::close() }}

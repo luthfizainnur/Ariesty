@@ -5,28 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Ariesty Cake</title>
     </head>
-                
+
     <body>
         <div class="wrapper">
-            <div class="navbar navbar-inverse navbar-fixed-top inverse">
+            <div class="navbar navbar-inverse">
                 <?php echo $__env->make('menuadmin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
             </div>
-        
-            <div class="container">
-                <div class="content">
 
+            <div class="container">
+                <?php echo $__env->make('notifikasi', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                <div class="content">
+                    <?php echo $__env->yieldContent('content'); ?>
                 </div>
             </div>
         </div>
-                
-        <?php echo $__env->yieldContent('content'); ?>
-    <!-- Bootstrap core css -->
-    <?php echo HTML::style('asset/bootstrap/css/bootstrap.css/'); ?>
 
-            
-    <!-- javascript -->
-    <?php echo HTML::script('asset/bootstrap/js/jquery.js/'); ?>
+
+        <!-- Bootstrap core css -->
+        <?php echo HTML::style('asset/bootstrap/css/bootstrap.css/'); ?>
+
+
+        <!-- javascript -->
+        <?php echo HTML::script('asset/bootstrap/js/jquery.js/'); ?>
 
         <?php echo $__env->yieldContent('javascript'); ?>
+        <div class="footer">
+            <?php echo $__env->make('footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        </div>
     </body>
 </html>

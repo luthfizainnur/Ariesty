@@ -10,9 +10,8 @@
     </div>
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">User</a></li>
-            <li ><a href="#">Questionaire</a></li>
-            <li ><a href="#">Ranking</a></li>
+            <li class="active"><a href="admin">Kuisioner</a></li>
+            <li ><a href="hasil">Ranking</a></li>
             <li ><a href="register">Register</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
