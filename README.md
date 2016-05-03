@@ -15,5 +15,3 @@ in home page for customer and questionnaire page in admin side there is a questi
 * After login you can process all input data questionaire in ranking menu and click "proses" after that new rank for product will appear, here the account detail:
   - username  : admin
   - password  : 12qwaszx
-
-To demo you can click <a href="http://www.ariestypm.esy.es/public/" target="_blank"><button>DEMO</button></a>
